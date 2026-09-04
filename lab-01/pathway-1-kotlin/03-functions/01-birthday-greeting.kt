@@ -1,6 +1,5 @@
 fun main() {
-    val greeting = birthdayGreeting()
-    println(greeting)
+    println(birthdayGreeting())
 }
 
 fun birthdayGreeting(): String {
