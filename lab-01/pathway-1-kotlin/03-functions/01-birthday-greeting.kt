@@ -3,6 +3,6 @@ fun main() {
 }
 
 fun birthdayGreeting(): String {
-    println("Happy Birthday, Rover!")
-    println("You are now 5 years old!")
+    val nameGreeting = "Happy Birthday, Rover!"
+    val ageGreeting = "You are now 5 years old!"
 }
