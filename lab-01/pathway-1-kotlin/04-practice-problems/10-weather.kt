@@ -3,8 +3,8 @@ fun main() {
 }
 
 fun printWeatherForCity() {
-    println("City: Ankara")
-    println("Low temperature: 27, High temperature: 31")
-    println("Chance of rain: 82%")
+    println("City: $cityName")
+    println("Low temperature: $lowTemp, High temperature: $highTemp")
+    println("Chance of rain: $chanceOfRain%")
     println()
 }
