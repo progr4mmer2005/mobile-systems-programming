@@ -1,5 +1,5 @@
 fun main() {
-    println(birthdayGreeting())
+    println(birthdayGreeting("Rover"))
 }
 
 fun birthdayGreeting(name: String): String {
