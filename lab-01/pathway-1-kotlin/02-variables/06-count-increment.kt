@@ -1,4 +1,5 @@
 fun main() {
-    var count: Int = 10
+    var count = 10
     println("You have $count unread messages.")
+    count = count + 1
 }
