@@ -4,16 +4,10 @@ fun main() {
     val thirdNumber = 8
 
     val result = add(firstNumber, secondNumber)
-    val anotherResult = add(firstNumber, thirdNumber)
+    val anotherResult = subtract(firstNumber, thirdNumber)
 
     println("$firstNumber + $secondNumber = $result")
-    println("$firstNumber + $thirdNumber = $anotherResult")
-
-    val difference = subtract(firstNumber, secondNumber)
-    val anotherDifference = subtract(firstNumber, thirdNumber)
-
-    println("$firstNumber - $secondNumber = $difference")
-    println("$firstNumber - $thirdNumber = $anotherDifference")
+    println("$firstNumber - $thirdNumber = $anotherResult")
 }
 
 fun add(firstNumber: Int, secondNumber: Int): Int {
