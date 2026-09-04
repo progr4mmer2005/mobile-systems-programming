@@ -1,4 +1,5 @@
 fun main() {
+    birthdayGreeting()
 }
 
 fun birthdayGreeting() {
