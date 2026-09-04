@@ -1,6 +1,6 @@
 fun main() {
     println(birthdayGreeting("Rover", 5))
-    println(birthdayGreeting("Rex", 2))
+    println(birthdayGreeting(name = "Rex", age = 2))
 }
 
 fun birthdayGreeting(name: String, age: Int): String {
