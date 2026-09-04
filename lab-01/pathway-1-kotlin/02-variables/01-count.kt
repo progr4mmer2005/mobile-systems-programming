@@ -1,4 +1,4 @@
 fun main() {
-    val count: Int = 10
+    val count = 10
     println("You have $count unread messages.")
 }
