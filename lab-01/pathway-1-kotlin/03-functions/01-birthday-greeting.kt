@@ -3,7 +3,7 @@ fun main() {
     println(birthdayGreeting("Rex"))
 }
 
-fun birthdayGreeting(name: String): String {
+fun birthdayGreeting(name: String, age: Int): String {
     val nameGreeting = "Happy Birthday, $name!"
     val ageGreeting = "You are now 5 years old!"
     return "$nameGreeting\n$ageGreeting"
