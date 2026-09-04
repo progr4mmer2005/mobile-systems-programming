@@ -1,5 +1,5 @@
 fun main() {
-    birthdayGreeting()
+    val greeting = birthdayGreeting()
 }
 
 fun birthdayGreeting(): String {
