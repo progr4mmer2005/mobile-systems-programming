@@ -1,7 +1,7 @@
 fun main() {
-    println(compareTime(timeSpentToday = 300, timeSpentYesterday = 250))
-    println(compareTime(timeSpentToday = 300, timeSpentYesterday = 300))
-    println(compareTime(timeSpentToday = 200, timeSpentYesterday = 220))
+    println("Have I spent more time using my phone today: ${compareTime(300, 250)}")
+    println("Have I spent more time using my phone today: ${compareTime(300, 300)}")
+    println("Have I spent more time using my phone today: ${compareTime(200, 220)}")
 }
 
 fun compareTime(timeSpentToday: Int, timeSpentYesterday: Int): Boolean {
