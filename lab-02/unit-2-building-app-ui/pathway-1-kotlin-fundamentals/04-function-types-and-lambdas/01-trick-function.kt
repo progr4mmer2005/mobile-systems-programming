@@ -2,6 +2,7 @@ fun main() {
     val trickFunction = trick
     trick()
     trickFunction()
+    treat()
 }
 
 val trick = {
