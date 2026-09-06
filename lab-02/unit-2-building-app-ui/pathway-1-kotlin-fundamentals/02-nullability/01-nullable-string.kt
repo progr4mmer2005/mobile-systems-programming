@@ -1,4 +1,4 @@
 fun main() {
-    val favoriteActor = null
+    var favoriteActor: String = "Sandra Oh"
     println(favoriteActor)
 }
