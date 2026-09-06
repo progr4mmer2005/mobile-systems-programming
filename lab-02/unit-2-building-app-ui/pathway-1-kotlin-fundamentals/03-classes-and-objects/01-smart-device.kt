@@ -120,8 +120,5 @@ class SmartHome(
 }
 
 fun main() {
-    val smartTvDevice = SmartDevice(name = "Android TV", category = "Entertainment")
-    println("Device name is: ${smartTvDevice.name}")
-    smartTvDevice.turnOn()
-    smartTvDevice.turnOff()
+    var smartDevice: SmartDevice = SmartTvDevice("Android TV", "Entertainment")
 }
