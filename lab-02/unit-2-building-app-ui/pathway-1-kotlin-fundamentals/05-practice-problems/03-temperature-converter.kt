@@ -1,3 +1,5 @@
+import java.util.Locale
+
 fun main() {
     printFinalTemperature(27.0, "Celsius", "Fahrenheit") { 9.0 / 5.0 * it + 32 }
     printFinalTemperature(350.0, "Kelvin", "Celsius") { it - 273.15 }
@@ -10,6 +12,6 @@ fun printFinalTemperature(
     finalUnit: String,
     conversionFormula: (Double) -> Double
 ) {
-    val finalMeasurement = String.format("%.2f", conversionFormula(initialMeasurement))
+    val finalMeasurement = String.format(Locale.US, "%.2f", conversionFormula(initialMeasurement))
     println("$initialMeasurement degrees $initialUnit is $finalMeasurement degrees $finalUnit.")
 }
