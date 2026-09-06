@@ -1,3 +1,6 @@
+import kotlin.properties.ReadWriteProperty
+import kotlin.reflect.KProperty
+
 open class SmartDevice(val name: String, val category: String) {
 
     var deviceStatus = "online"
