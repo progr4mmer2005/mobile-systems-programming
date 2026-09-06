@@ -39,6 +39,11 @@ class SmartTvDevice(deviceName: String, deviceCategory: String) :
     }
 
     fun turnOn() {
+        deviceStatus = "on"
+        println(
+            "$name is turned on. Speaker volume is set to $speakerVolume and channel number is " +
+                "set to $channelNumber."
+        )
     }
 }
 
