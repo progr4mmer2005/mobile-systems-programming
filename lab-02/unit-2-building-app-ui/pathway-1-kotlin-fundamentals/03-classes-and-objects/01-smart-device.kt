@@ -12,7 +12,7 @@ class SmartDevice(val name: String, val category: String) {
 }
 
 fun main() {
-    val smartTvDevice = SmartDevice("Android TV", "Entertainment")
+    val smartTvDevice = SmartDevice(name = "Android TV", category = "Entertainment")
     println("Device name is: ${smartTvDevice.name}")
     smartTvDevice.turnOn()
     smartTvDevice.turnOff()
