@@ -53,6 +53,9 @@ class SmartLightDevice(deviceName: String, deviceCategory: String) :
         brightnessLevel++
         println("Brightness increased to $brightnessLevel.")
     }
+
+    fun turnOn() {
+    }
 }
 
 class SmartHome(
