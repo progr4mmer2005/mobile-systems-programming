@@ -133,6 +133,10 @@ class SmartHome(
     }
 }
 
+class RangeRegulator() : ReadWriteProperty<Any?, Int> {
+
+}
+
 fun main() {
     var smartDevice: SmartDevice = SmartTvDevice("Android TV", "Entertainment")
     smartDevice.turnOn()
