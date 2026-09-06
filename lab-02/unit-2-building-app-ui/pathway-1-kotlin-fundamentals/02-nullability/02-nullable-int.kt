@@ -3,4 +3,5 @@ fun main() {
     println(number)
 
     number = null
+    println(number)
 }
