@@ -3,7 +3,7 @@ fun main() {
         "$quantity quarters"
     }
 
-    val cupcake: (Int) -> String = { quantity ->
+    val cupcake: (Int) -> String = {
         "Have a cupcake!"
     }
 
