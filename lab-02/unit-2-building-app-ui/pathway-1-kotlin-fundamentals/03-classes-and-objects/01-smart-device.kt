@@ -87,6 +87,11 @@ class SmartHome(
     fun increaseLightBrightness() {
         smartLightDevice.increaseBrightness()
     }
+
+    fun turnOffAllDevices() {
+        turnOffTv()
+        turnOffLight()
+    }
 }
 
 fun main() {
