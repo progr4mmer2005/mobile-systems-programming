@@ -6,4 +6,6 @@ fun main() {
         else if (trafficLightColor == "Yellow") "Slow"
         else if (trafficLightColor == "Green") "Go"
         else "Invalid traffic-light color"
+
+    println(message)
 }
