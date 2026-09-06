@@ -48,6 +48,11 @@ class SmartLightDevice(deviceName: String, deviceCategory: String) :
                 field = value
             }
         }
+
+    fun increaseBrightness() {
+        brightnessLevel++
+        println("Brightness increased to $brightnessLevel.")
+    }
 }
 
 fun main() {
