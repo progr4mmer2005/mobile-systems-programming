@@ -1,4 +1,5 @@
 fun main() {
+    val trickFunction = trick
 }
 
 fun trick() {
