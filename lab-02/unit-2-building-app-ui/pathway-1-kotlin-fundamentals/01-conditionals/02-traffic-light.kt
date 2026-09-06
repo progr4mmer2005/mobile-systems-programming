@@ -4,5 +4,6 @@ fun main() {
     when (trafficLightColor) {
         "Red" -> println("Stop")
         "Yellow" -> println("Slow")
+        "Green" -> println("Go")
     }
 }
