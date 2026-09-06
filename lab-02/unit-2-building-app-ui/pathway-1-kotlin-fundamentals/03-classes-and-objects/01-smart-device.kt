@@ -20,6 +20,13 @@ class SmartTvDevice(deviceName: String, deviceCategory: String) :
                 field = value
             }
         }
+
+    var channelNumber = 1
+        set(value) {
+            if (value in 0..200) {
+                field = value
+            }
+        }
 }
 
 fun main() {
