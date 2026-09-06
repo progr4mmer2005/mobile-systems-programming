@@ -8,6 +8,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -38,12 +39,36 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun ComposeQuadrantApp(modifier: Modifier = Modifier) {
-    QuadrantCard(
-        title = stringResource(R.string.text_composable),
-        description = stringResource(R.string.text_composable_description),
-        backgroundColor = Color(0xFFEADDFF),
-        modifier = modifier
-    )
+    Column(modifier = modifier.fillMaxSize()) {
+        Row(modifier = Modifier.weight(1f)) {
+            QuadrantCard(
+                title = stringResource(R.string.text_composable),
+                description = stringResource(R.string.text_composable_description),
+                backgroundColor = Color(0xFFEADDFF),
+                modifier = Modifier.weight(1f)
+            )
+            QuadrantCard(
+                title = stringResource(R.string.image_composable),
+                description = stringResource(R.string.image_composable_description),
+                backgroundColor = Color(0xFFD0BCFF),
+                modifier = Modifier.weight(1f)
+            )
+        }
+        Row(modifier = Modifier.weight(1f)) {
+            QuadrantCard(
+                title = stringResource(R.string.row_composable),
+                description = stringResource(R.string.row_composable_description),
+                backgroundColor = Color(0xFFB69DF8),
+                modifier = Modifier.weight(1f)
+            )
+            QuadrantCard(
+                title = stringResource(R.string.column_composable),
+                description = stringResource(R.string.column_composable_description),
+                backgroundColor = Color(0xFFF6EDFF),
+                modifier = Modifier.weight(1f)
+            )
+        }
+    }
 }
 
 @Composable
