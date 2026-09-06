@@ -121,4 +121,5 @@ class SmartHome(
 
 fun main() {
     var smartDevice: SmartDevice = SmartTvDevice("Android TV", "Entertainment")
+    smartDevice.turnOn()
 }
