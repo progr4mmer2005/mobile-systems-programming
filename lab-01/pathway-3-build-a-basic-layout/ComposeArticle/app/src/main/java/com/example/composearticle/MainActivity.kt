@@ -53,6 +53,11 @@ fun ComposeArticleApp(modifier: Modifier = Modifier) {
             textAlign = TextAlign.Justify,
             modifier = Modifier.padding(start = 16.dp, end = 16.dp)
         )
+        Text(
+            text = stringResource(R.string.compose_long_desc),
+            textAlign = TextAlign.Justify,
+            modifier = Modifier.padding(16.dp)
+        )
     }
 }
 
