@@ -64,6 +64,14 @@ class SmartHome(val smartTvDevice: SmartTvDevice) {
     fun turnOffTv() {
         smartTvDevice.turnOff()
     }
+
+    fun increaseTvVolume() {
+        smartTvDevice.increaseSpeakerVolume()
+    }
+
+    fun changeTvChannelToNext() {
+        smartTvDevice.nextChannel()
+    }
 }
 
 fun main() {
