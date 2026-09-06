@@ -128,6 +128,24 @@ class SmartHome(
         }
     }
 
+    fun decreaseTvVolume() {
+        if (smartTvDevice.deviceStatus == "on") {
+            smartTvDevice.decreaseVolume()
+        }
+    }
+
+    fun changeTvChannelToPrevious() {
+        if (smartTvDevice.deviceStatus == "on") {
+            smartTvDevice.previousChannel()
+        }
+    }
+
+    fun printSmartTvInfo() {
+        if (smartTvDevice.deviceStatus == "on") {
+            smartTvDevice.printDeviceInfo()
+        }
+    }
+
     fun turnOnLight() {
         if (smartLightDevice.deviceStatus != "on") {
             deviceTurnOnCount++
@@ -145,6 +163,18 @@ class SmartHome(
     fun increaseLightBrightness() {
         if (smartLightDevice.deviceStatus == "on") {
             smartLightDevice.increaseBrightness()
+        }
+    }
+
+    fun decreaseLightBrightness() {
+        if (smartLightDevice.deviceStatus == "on") {
+            smartLightDevice.decreaseBrightness()
+        }
+    }
+
+    fun printSmartLightInfo() {
+        if (smartLightDevice.deviceStatus == "on") {
+            smartLightDevice.printDeviceInfo()
         }
     }
 
