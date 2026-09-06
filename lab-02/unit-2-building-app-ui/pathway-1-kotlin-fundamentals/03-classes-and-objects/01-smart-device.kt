@@ -2,6 +2,8 @@ open class SmartDevice(val name: String, val category: String) {
 
     var deviceStatus = "online"
 
+    open val deviceType = "unknown"
+
     open fun turnOn() {
         deviceStatus = "on"
     }
