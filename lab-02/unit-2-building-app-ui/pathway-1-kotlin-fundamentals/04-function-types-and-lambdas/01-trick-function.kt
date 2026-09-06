@@ -1,6 +1,9 @@
 fun main() {
 }
 
+fun trickOrTreat(isTrick: Boolean): () -> Unit {
+}
+
 val trick = {
     println("No treats!")
 }
