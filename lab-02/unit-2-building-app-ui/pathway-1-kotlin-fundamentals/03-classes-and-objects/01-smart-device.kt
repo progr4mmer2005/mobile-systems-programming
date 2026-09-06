@@ -142,6 +142,8 @@ class RangeRegulator(
     private val maxValue: Int
 ) : ReadWriteProperty<Any?, Int> {
 
+    var fieldData = initialValue
+
     override fun getValue(thisRef: Any?, property: KProperty<*>): Int {
     }
 
