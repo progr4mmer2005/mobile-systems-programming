@@ -37,6 +37,9 @@ class SmartTvDevice(deviceName: String, deviceCategory: String) :
         channelNumber++
         println("Channel number increased to $channelNumber.")
     }
+
+    fun turnOn() {
+    }
 }
 
 class SmartLightDevice(deviceName: String, deviceCategory: String) :
