@@ -77,6 +77,10 @@ fun BusinessCardApp(modifier: Modifier = Modifier) {
         Spacer(modifier = Modifier.height(64.dp))
         Column(horizontalAlignment = Alignment.Start) {
             ContactRow(
+                iconId = R.drawable.ic_phone,
+                text = stringResource(R.string.phone)
+            )
+            ContactRow(
                 iconId = R.drawable.ic_person,
                 text = stringResource(R.string.nickname)
             )
