@@ -3,6 +3,10 @@ fun main() {
         "$quantity quarters"
     }
 
+    val cupcake: (Int) -> String = { quantity ->
+        "Have a cupcake!"
+    }
+
     val treatFunction = trickOrTreat(false)
     val trickFunction = trickOrTreat(true)
     treatFunction()
