@@ -8,6 +8,6 @@ val trick = {
     println("No treats!")
 }
 
-val treat = {
+val treat: () -> Unit = {
     println("Have a treat!")
 }
