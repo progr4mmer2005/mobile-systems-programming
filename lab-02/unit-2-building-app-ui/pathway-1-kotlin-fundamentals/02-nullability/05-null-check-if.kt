@@ -3,5 +3,6 @@ fun main() {
 
     if (favoriteActor != null) {
         println("The number of characters in your favorite actor's name is ${favoriteActor.length}.")
+    } else {
     }
 }
