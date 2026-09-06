@@ -1,7 +1,7 @@
 fun main() {
     val trafficLightColor = "Black"
 
-    if (trafficLightColor == "Red") {
+    val message = if (trafficLightColor == "Red") {
         println("Stop")
     } else if (trafficLightColor == "Yellow") {
         println("Slow")
