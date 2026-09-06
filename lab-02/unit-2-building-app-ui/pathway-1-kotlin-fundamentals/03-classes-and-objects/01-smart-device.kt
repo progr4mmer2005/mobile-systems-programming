@@ -38,7 +38,7 @@ class SmartTvDevice(deviceName: String, deviceCategory: String) :
         println("Channel number increased to $channelNumber.")
     }
 
-    fun turnOn() {
+    override fun turnOn() {
         deviceStatus = "on"
         println(
             "$name is turned on. Speaker volume is set to $speakerVolume and channel number is " +
@@ -46,7 +46,7 @@ class SmartTvDevice(deviceName: String, deviceCategory: String) :
         )
     }
 
-    fun turnOff() {
+    override fun turnOff() {
         deviceStatus = "off"
         println("$name turned off")
     }
