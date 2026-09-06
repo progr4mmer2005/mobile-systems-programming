@@ -4,5 +4,6 @@ fun main() {
     val lengthOfName = if (favoriteActor != null) {
         favoriteActor.length
     } else {
+        0
     }
 }
