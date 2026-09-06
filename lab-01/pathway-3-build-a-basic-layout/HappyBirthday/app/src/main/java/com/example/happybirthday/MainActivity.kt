@@ -29,12 +29,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             HappyBirthdayTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    GreetingText(
+                    GreetingImage(
                         message = "Happy Birthday Denis!",
                         from = "From Denis",
-                        modifier = Modifier
-                            .padding(innerPadding)
-                            .padding(8.dp)
+                        modifier = Modifier.padding(innerPadding)
                     )
                 }
             }
