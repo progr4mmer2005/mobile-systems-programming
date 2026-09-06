@@ -61,6 +61,9 @@ class SmartLightDevice(deviceName: String, deviceCategory: String) :
     }
 
     fun turnOff() {
+        deviceStatus = "off"
+        brightnessLevel = 0
+        println("Smart Light turned off")
     }
 }
 
