@@ -3,6 +3,7 @@ fun main() {
 
     if (trafficLightColor == "Red") {
         println("Stop")
+    } else if (trafficLightColor == "Yellow") {
     } else {
         println("Go")
     }
