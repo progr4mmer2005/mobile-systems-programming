@@ -16,6 +16,8 @@ open class SmartDevice(val name: String, val category: String) {
 class SmartTvDevice(deviceName: String, deviceCategory: String) :
     SmartDevice(name = deviceName, category = deviceCategory) {
 
+    override val deviceType = "Smart TV"
+
     var speakerVolume = 2
         set(value) {
             if (value in 0..100) {
