@@ -10,4 +10,5 @@ class SmartDevice {
 
 fun main() {
     val smartTvDevice = SmartDevice()
+    smartTvDevice.turnOn()
 }
