@@ -45,6 +45,9 @@ class SmartTvDevice(deviceName: String, deviceCategory: String) :
                 "set to $channelNumber."
         )
     }
+
+    fun turnOff() {
+    }
 }
 
 class SmartLightDevice(deviceName: String, deviceCategory: String) :
