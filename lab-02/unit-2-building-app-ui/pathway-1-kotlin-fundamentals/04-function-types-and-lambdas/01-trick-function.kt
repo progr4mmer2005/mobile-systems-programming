@@ -1,5 +1,5 @@
 fun main() {
-    val coins: (Int) -> String = { quantity ->
+    val coins: (Int) -> String = {
         "$quantity quarters"
     }
 
