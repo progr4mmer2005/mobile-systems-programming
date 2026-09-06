@@ -7,4 +7,5 @@ fun main() {
         "Green" -> "Go"
         else -> "Invalid traffic-light color"
     }
+    println(message)
 }
