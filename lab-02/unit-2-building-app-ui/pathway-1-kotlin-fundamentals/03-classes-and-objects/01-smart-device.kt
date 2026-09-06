@@ -145,6 +145,7 @@ class RangeRegulator(
     var fieldData = initialValue
 
     override fun getValue(thisRef: Any?, property: KProperty<*>): Int {
+        return fieldData
     }
 
     override fun setValue(thisRef: Any?, property: KProperty<*>, value: Int) {
