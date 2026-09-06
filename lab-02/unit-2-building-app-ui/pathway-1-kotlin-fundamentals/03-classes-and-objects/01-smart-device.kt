@@ -96,10 +96,12 @@ class SmartHome(
         private set
 
     fun turnOnTv() {
+        deviceTurnOnCount++
         smartTvDevice.turnOn()
     }
 
     fun turnOffTv() {
+        deviceTurnOnCount--
         smartTvDevice.turnOff()
     }
 
@@ -112,10 +114,12 @@ class SmartHome(
     }
 
     fun turnOnLight() {
+        deviceTurnOnCount++
         smartLightDevice.turnOn()
     }
 
     fun turnOffLight() {
+        deviceTurnOnCount--
         smartLightDevice.turnOff()
     }
 
