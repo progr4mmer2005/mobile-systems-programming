@@ -1,5 +1,5 @@
 fun main() {
-    val trickFunction = ::trick
+    val trickFunction = trick
 }
 
 val trick = {
