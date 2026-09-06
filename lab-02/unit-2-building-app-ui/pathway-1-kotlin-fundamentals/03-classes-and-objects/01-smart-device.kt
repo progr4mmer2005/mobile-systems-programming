@@ -92,6 +92,9 @@ class SmartHome(
     val smartLightDevice: SmartLightDevice
 ) {
 
+    var deviceTurnOnCount = 0
+        private set
+
     fun turnOnTv() {
         smartTvDevice.turnOn()
     }
