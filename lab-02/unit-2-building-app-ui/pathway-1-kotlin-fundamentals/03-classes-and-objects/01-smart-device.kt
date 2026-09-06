@@ -75,6 +75,14 @@ class SmartHome(
     fun changeTvChannelToNext() {
         smartTvDevice.nextChannel()
     }
+
+    fun turnOnLight() {
+        smartLightDevice.turnOn()
+    }
+
+    fun turnOffLight() {
+        smartLightDevice.turnOff()
+    }
 }
 
 fun main() {
