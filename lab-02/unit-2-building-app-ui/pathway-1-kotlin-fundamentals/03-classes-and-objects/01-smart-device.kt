@@ -60,6 +60,10 @@ class SmartHome(val smartTvDevice: SmartTvDevice) {
     fun turnOnTv() {
         smartTvDevice.turnOn()
     }
+
+    fun turnOffTv() {
+        smartTvDevice.turnOff()
+    }
 }
 
 fun main() {
