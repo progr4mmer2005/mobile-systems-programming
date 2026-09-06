@@ -55,6 +55,9 @@ class SmartLightDevice(deviceName: String, deviceCategory: String) :
     }
 }
 
+class SmartHome {
+}
+
 fun main() {
     val smartTvDevice = SmartDevice(name = "Android TV", category = "Entertainment")
     println("Device name is: ${smartTvDevice.name}")
