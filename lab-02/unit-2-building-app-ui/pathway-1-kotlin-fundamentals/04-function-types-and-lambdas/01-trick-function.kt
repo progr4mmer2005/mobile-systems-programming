@@ -7,8 +7,8 @@ fun main() {
         "Have a cupcake!"
     }
 
-    val treatFunction = trickOrTreat(false)
-    val trickFunction = trickOrTreat(true)
+    val treatFunction = trickOrTreat(false, coins)
+    val trickFunction = trickOrTreat(true, cupcake)
     treatFunction()
     trickFunction()
 }
