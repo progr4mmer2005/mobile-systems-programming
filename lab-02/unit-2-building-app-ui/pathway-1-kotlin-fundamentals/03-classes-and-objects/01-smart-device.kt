@@ -55,7 +55,9 @@ class SmartLightDevice(deviceName: String, deviceCategory: String) :
     }
 }
 
-class SmartHome(val smartTvDevice: SmartTvDevice) {
+class SmartHome(
+    val smartTvDevice: SmartTvDevice,
+) {
 
     fun turnOnTv() {
         smartTvDevice.turnOn()
