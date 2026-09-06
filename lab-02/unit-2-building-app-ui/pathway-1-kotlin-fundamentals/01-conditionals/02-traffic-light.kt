@@ -7,5 +7,7 @@ fun main() {
         println("Slow")
     } else if (trafficLightColor == "Green") {
         println("Go")
+    } else {
+        println("Invalid traffic-light color")
     }
 }
