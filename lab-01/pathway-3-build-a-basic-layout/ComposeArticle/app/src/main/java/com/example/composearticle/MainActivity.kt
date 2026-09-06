@@ -4,12 +4,15 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.composearticle.ui.theme.ComposeArticleTheme
 
@@ -20,10 +23,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ComposeArticleTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    ComposeArticleApp(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
@@ -31,17 +31,20 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+fun ComposeArticleApp(modifier: Modifier = Modifier) {
+    Column(modifier = modifier) {
+        Image(
+            painter = painterResource(R.drawable.bg_compose_background),
+            contentDescription = null,
+            modifier = Modifier.fillMaxWidth()
+        )
+    }
 }
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun ComposeArticleAppPreview() {
     ComposeArticleTheme {
-        Greeting("Android")
+        ComposeArticleApp()
     }
 }
