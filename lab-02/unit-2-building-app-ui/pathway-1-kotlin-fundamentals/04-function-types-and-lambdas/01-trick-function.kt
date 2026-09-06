@@ -5,7 +5,7 @@ fun main() {
     trickFunction()
 }
 
-fun trickOrTreat(isTrick: Boolean): () -> Unit {
+fun trickOrTreat(isTrick: Boolean, extraTreat: (Int) -> String): () -> Unit {
     if (isTrick) {
         return trick
     } else {
