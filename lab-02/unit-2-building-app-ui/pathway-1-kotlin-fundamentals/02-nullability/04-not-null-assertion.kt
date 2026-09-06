@@ -1,4 +1,4 @@
 fun main() {
-    var favoriteActor: String? = null
+    var favoriteActor: String? = "Sandra Oh"
     println(favoriteActor!!.length)
 }
