@@ -1,7 +1,5 @@
-class SmartDevice {
+class SmartDevice(val name: String, val category: String) {
 
-    val name = "Android TV"
-    val category = "Entertainment"
     var deviceStatus = "online"
 
     fun turnOn() {
