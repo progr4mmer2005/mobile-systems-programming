@@ -47,6 +47,8 @@ class SmartTvDevice(deviceName: String, deviceCategory: String) :
     }
 
     fun turnOff() {
+        deviceStatus = "off"
+        println("$name turned off")
     }
 }
 
