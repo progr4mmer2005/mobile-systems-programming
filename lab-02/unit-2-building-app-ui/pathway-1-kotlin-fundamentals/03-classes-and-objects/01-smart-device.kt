@@ -39,6 +39,10 @@ class SmartTvDevice(deviceName: String, deviceCategory: String) :
     }
 }
 
+class SmartLightDevice(deviceName: String, deviceCategory: String) :
+    SmartDevice(name = deviceName, category = deviceCategory) {
+}
+
 fun main() {
     val smartTvDevice = SmartDevice(name = "Android TV", category = "Entertainment")
     println("Device name is: ${smartTvDevice.name}")
