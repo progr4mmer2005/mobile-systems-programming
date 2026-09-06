@@ -1,4 +1,6 @@
 class SmartDevice {
+    fun turnOn() {
+    }
 }
 
 fun main() {
