@@ -27,6 +27,11 @@ class SmartTvDevice(deviceName: String, deviceCategory: String) :
                 field = value
             }
         }
+
+    fun increaseSpeakerVolume() {
+        speakerVolume++
+        println("Speaker volume increased to $speakerVolume.")
+    }
 }
 
 fun main() {
