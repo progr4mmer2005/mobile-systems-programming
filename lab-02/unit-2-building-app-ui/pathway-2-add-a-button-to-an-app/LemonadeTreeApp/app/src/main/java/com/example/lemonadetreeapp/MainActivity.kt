@@ -1,4 +1,4 @@
-package com.example.lemonade
+package com.example.lemonadetreeapp
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,12 +10,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.lemonadetreeapp.ui.theme.LemonadeTreeAppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            LemonadeTheme {
+            LemonadeTreeAppTheme {
                 LemonApp()
             }
         }
@@ -24,7 +25,6 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun LemonApp() {
-    // A surface container using the 'background' color from the theme
     Surface(
         modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colorScheme.background
@@ -36,12 +36,7 @@ fun LemonApp() {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    LemonadeTheme {
+    LemonadeTreeAppTheme {
         LemonApp()
     }
-}
-
-@Composable
-fun LemonadeTheme(content: @Composable () -> Unit) {
-    TODO("Not yet implemented")
 }
