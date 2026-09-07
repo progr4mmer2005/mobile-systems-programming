@@ -4,13 +4,16 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -21,10 +24,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.lemonadetreeapp.ui.theme.LemonadeTreeAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -109,7 +114,10 @@ fun LemonTextAndImage(
         verticalArrangement = Arrangement.Center,
         modifier = modifier.fillMaxSize()
     ) {
-        Text(text = stringResource(textLabelResourceId))
+        Text(
+            text = stringResource(textLabelResourceId),
+            fontSize = 18.sp
+        )
         Spacer(modifier = Modifier.height(16.dp))
         Image(
             painter = painterResource(drawableResourceId),
@@ -117,6 +125,12 @@ fun LemonTextAndImage(
             modifier = Modifier
                 .wrapContentSize()
                 .clickable(onClick = onImageClick)
+                .border(
+                    width = 2.dp,
+                    color = Color(105, 205, 216),
+                    shape = RoundedCornerShape(4.dp)
+                )
+                .padding(16.dp)
         )
     }
 }
