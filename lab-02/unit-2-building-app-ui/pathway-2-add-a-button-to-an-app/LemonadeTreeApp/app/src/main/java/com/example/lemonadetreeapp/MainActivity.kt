@@ -51,7 +51,9 @@ class MainActivity : ComponentActivity() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LemonApp() {
+    // номер текущего шага, от него зависит текст и картинка на экране
     var currentStep by remember { mutableStateOf(1) }
+    // сколько нажатий осталось, чтобы выжать лимон
     var squeezeCount by remember { mutableStateOf(0) }
 
     Scaffold(
@@ -70,6 +72,7 @@ fun LemonApp() {
         }
     ) { innerPadding ->
         Surface(
+            // innerPadding не даёт содержимому залезть под верхнюю панель
             modifier = Modifier
                 .fillMaxSize()
                 .padding(innerPadding),
@@ -83,6 +86,7 @@ fun LemonApp() {
                         contentDescriptionResourceId = R.string.lemon_tree_content_description,
                         onImageClick = {
                             currentStep = 2
+                            // для каждого нового лимона своё число нажатий
                             squeezeCount = (2..4).random()
                         }
                     )
@@ -94,6 +98,7 @@ fun LemonApp() {
                         contentDescriptionResourceId = R.string.lemon_content_description,
                         onImageClick = {
                             squeezeCount--
+                            // дальше пускаем только когда лимон выжат до конца
                             if (squeezeCount == 0) {
                                 currentStep = 3
                             }
@@ -125,6 +130,7 @@ fun LemonApp() {
     }
 }
 
+// одна функция на все четыре шага, меняются только ресурсы и обработчик нажатия
 @Composable
 fun LemonTextAndImage(
     textLabelResourceId: Int,
@@ -149,6 +155,7 @@ fun LemonTextAndImage(
             modifier = Modifier
                 .wrapContentSize()
                 .clickable(onClick = onImageClick)
+                // padding после border, иначе рамка обожмёт картинку вплотную
                 .border(
                     width = 2.dp,
                     color = Color(105, 205, 216),
