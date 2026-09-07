@@ -23,6 +23,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
@@ -71,6 +72,11 @@ fun TipTimeLayout() {
             modifier = Modifier
                 .padding(bottom = 16.dp, top = 40.dp)
                 .align(alignment = Alignment.Start)
+        )
+        EditNumberField(
+            modifier = Modifier
+                .padding(bottom = 32.dp)
+                .fillMaxWidth()
         )
         Text(
             text = stringResource(R.string.tip_amount, "$0.00"),
