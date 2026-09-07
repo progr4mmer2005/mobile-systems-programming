@@ -48,40 +48,71 @@ fun LemonApp() {
     ) {
         when (currentStep) {
             1 -> {
-                Column(
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.Center,
-                    modifier = Modifier.fillMaxSize()
-                ) {
-                    Text(text = stringResource(R.string.lemon_select))
-                    Spacer(modifier = Modifier.height(16.dp))
-                    Image(
-                        painter = painterResource(R.drawable.lemon_tree),
-                        contentDescription = stringResource(R.string.lemon_tree_content_description),
-                        modifier = Modifier
-                            .wrapContentSize()
-                            .clickable {
-                                currentStep = 2
-                            }
-                    )
-                }
+                LemonTextAndImage(
+                    textLabelResourceId = R.string.lemon_select,
+                    drawableResourceId = R.drawable.lemon_tree,
+                    contentDescriptionResourceId = R.string.lemon_tree_content_description,
+                    onImageClick = {
+                        currentStep = 2
+                    }
+                )
             }
             2 -> {
-                Column(
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.Center,
-                    modifier = Modifier.fillMaxSize()
-                ) {
-                    Text(text = stringResource(R.string.lemon_squeeze))
-                    Spacer(modifier = Modifier.height(16.dp))
-                    Image(
-                        painter = painterResource(R.drawable.lemon_squeeze),
-                        contentDescription = stringResource(R.string.lemon_content_description),
-                        modifier = Modifier.wrapContentSize()
-                    )
-                }
+                LemonTextAndImage(
+                    textLabelResourceId = R.string.lemon_squeeze,
+                    drawableResourceId = R.drawable.lemon_squeeze,
+                    contentDescriptionResourceId = R.string.lemon_content_description,
+                    onImageClick = {
+                        currentStep = 3
+                    }
+                )
+            }
+            3 -> {
+                LemonTextAndImage(
+                    textLabelResourceId = R.string.lemon_drink,
+                    drawableResourceId = R.drawable.lemon_drink,
+                    contentDescriptionResourceId = R.string.lemonade_content_description,
+                    onImageClick = {
+                        currentStep = 4
+                    }
+                )
+            }
+            4 -> {
+                LemonTextAndImage(
+                    textLabelResourceId = R.string.lemon_empty_glass,
+                    drawableResourceId = R.drawable.lemon_restart,
+                    contentDescriptionResourceId = R.string.empty_glass_content_description,
+                    onImageClick = {
+                        currentStep = 1
+                    }
+                )
             }
         }
+    }
+}
+
+@Composable
+fun LemonTextAndImage(
+    textLabelResourceId: Int,
+    drawableResourceId: Int,
+    contentDescriptionResourceId: Int,
+    onImageClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = modifier.fillMaxSize()
+    ) {
+        Text(text = stringResource(textLabelResourceId))
+        Spacer(modifier = Modifier.height(16.dp))
+        Image(
+            painter = painterResource(drawableResourceId),
+            contentDescription = stringResource(contentDescriptionResourceId),
+            modifier = Modifier
+                .wrapContentSize()
+                .clickable(onClick = onImageClick)
+        )
     }
 }
 
