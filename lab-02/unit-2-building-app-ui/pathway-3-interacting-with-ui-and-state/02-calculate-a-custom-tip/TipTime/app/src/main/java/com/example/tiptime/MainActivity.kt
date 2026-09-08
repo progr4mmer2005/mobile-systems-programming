@@ -176,7 +176,7 @@ fun RoundTheTipRow(
  * Example would be "$10.00".
  */
 private fun calculateTip(amount: Double, tipPercent: Double = 15.0, roundUp: Boolean): String {
-    val tip = tipPercent / 100 * amount
+    var tip = tipPercent / 100 * amount
     if (roundUp) {
         tip = kotlin.math.ceil(tip)
     }
