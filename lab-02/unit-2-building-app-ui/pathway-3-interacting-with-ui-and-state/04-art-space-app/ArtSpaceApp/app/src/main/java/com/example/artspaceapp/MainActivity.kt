@@ -8,6 +8,7 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -18,7 +19,9 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -82,28 +85,33 @@ fun ArtSpaceApp(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .fillMaxSize()
+            .verticalScroll(rememberScrollState())
             .padding(horizontal = 24.dp, vertical = 32.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        ArtworkWall(
-            artwork = artwork,
-            description = description
-        )
-        Spacer(modifier = Modifier.height(40.dp))
-        ArtworkDescriptor(
-            title = title,
-            year = year
-        )
-        Spacer(modifier = Modifier.height(32.dp))
-        DisplayController(
-            onPreviousClick = {
-                currentArtwork = if (currentArtwork == 1) 3 else currentArtwork - 1
-            },
-            onNextClick = {
-                currentArtwork = if (currentArtwork == 3) 1 else currentArtwork + 1
-            }
-        )
+        Column(
+            modifier = Modifier.widthIn(max = 480.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            ArtworkWall(
+                artwork = artwork,
+                description = description
+            )
+            Spacer(modifier = Modifier.height(40.dp))
+            ArtworkDescriptor(
+                title = title,
+                year = year
+            )
+            Spacer(modifier = Modifier.height(32.dp))
+            DisplayController(
+                onPreviousClick = {
+                    currentArtwork = if (currentArtwork == 1) 3 else currentArtwork - 1
+                },
+                onNextClick = {
+                    currentArtwork = if (currentArtwork == 3) 1 else currentArtwork + 1
+                }
+            )
+        }
     }
 }
 
@@ -126,7 +134,7 @@ fun ArtworkWall(
             modifier = Modifier
                 .padding(24.dp)
                 .fillMaxWidth()
-                .heightIn(max = 380.dp)
+                .heightIn(max = 340.dp)
         )
     }
 }
