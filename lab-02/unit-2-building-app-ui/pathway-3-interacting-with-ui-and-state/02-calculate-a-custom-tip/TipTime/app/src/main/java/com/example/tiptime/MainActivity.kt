@@ -76,7 +76,7 @@ fun TipTimeLayout() {
     var roundUp by remember { mutableStateOf(false) }
     val amount = amountInput.toDoubleOrNull() ?: 0.0
     val tipPercent = tipInput.toDoubleOrNull() ?: 0.0
-    val tip = calculateTip(amount, tipPercent)
+    val tip = calculateTip(amount, tipPercent, roundUp)
 
     Column(
         modifier = Modifier
