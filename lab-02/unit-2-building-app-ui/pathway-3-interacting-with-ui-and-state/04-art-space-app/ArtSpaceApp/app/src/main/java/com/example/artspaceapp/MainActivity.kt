@@ -25,6 +25,10 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
@@ -52,6 +56,29 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun ArtSpaceApp(modifier: Modifier = Modifier) {
+    var currentArtwork by remember { mutableStateOf(1) }
+
+    val artwork = when (currentArtwork) {
+        1 -> R.drawable.artwork_1
+        2 -> R.drawable.artwork_2
+        else -> R.drawable.artwork_3
+    }
+    val title = when (currentArtwork) {
+        1 -> R.string.artwork_1_title
+        2 -> R.string.artwork_2_title
+        else -> R.string.artwork_3_title
+    }
+    val year = when (currentArtwork) {
+        1 -> R.string.artwork_1_year
+        2 -> R.string.artwork_2_year
+        else -> R.string.artwork_3_year
+    }
+    val description = when (currentArtwork) {
+        1 -> R.string.artwork_1_description
+        2 -> R.string.artwork_2_description
+        else -> R.string.artwork_3_description
+    }
+
     Column(
         modifier = modifier
             .fillMaxSize()
@@ -60,18 +87,22 @@ fun ArtSpaceApp(modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.Center
     ) {
         ArtworkWall(
-            artwork = R.drawable.artwork_1,
-            description = R.string.artwork_1_description
+            artwork = artwork,
+            description = description
         )
         Spacer(modifier = Modifier.height(40.dp))
         ArtworkDescriptor(
-            title = R.string.artwork_1_title,
-            year = R.string.artwork_1_year
+            title = title,
+            year = year
         )
         Spacer(modifier = Modifier.height(32.dp))
         DisplayController(
-            onPreviousClick = { },
-            onNextClick = { }
+            onPreviousClick = {
+                currentArtwork = if (currentArtwork == 1) 3 else currentArtwork - 1
+            },
+            onNextClick = {
+                currentArtwork = if (currentArtwork == 3) 1 else currentArtwork + 1
+            }
         )
     }
 }
