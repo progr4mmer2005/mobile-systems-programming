@@ -161,7 +161,7 @@ fun RoundTheTipRow(
     ) {
         Text(text = stringResource(R.string.round_up_tip))
         Switch(
-            modifier = modifier
+            modifier = Modifier
                 .fillMaxWidth()
                 .wrapContentWidth(Alignment.End),
             checked = roundUp,
